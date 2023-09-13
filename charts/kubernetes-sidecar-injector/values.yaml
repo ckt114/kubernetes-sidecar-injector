@@ -1,6 +1,6 @@
 image:
   repository: expediagroup/kubernetes-sidecar-injector
-  tag: latest
+  tag: 1.1.0
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -20,7 +20,7 @@ sidecars:
   dataKey: sidecars.yaml
 
 selectors:
-  injectPrefix: sidecar-injector.expedia.com
+  injectPrefix: sidecar-injector.liveramp.com
   injectName: inject
   disableInjectLabel: disable-inject
   objectSelector: {}

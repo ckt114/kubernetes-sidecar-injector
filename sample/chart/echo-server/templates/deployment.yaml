@@ -13,8 +13,7 @@ spec:
   template:
     metadata:
       annotations:
-        sidecar-injector.expedia.com/inject: "haystack-agent-sidecar"
-        sidecar-injector.expedia.com/some-api-key: "6feab492-fc9b-4c38-b50d-3791718c8203"
+        sidecar-injector.liveramp.com/inject: "otel-agent-sidecars-otel-sidecar"
       labels:
         app.kubernetes.io/name: {{ .Chart.Name }}
     spec:
@@ -26,3 +25,6 @@ spec:
           args:
             - -listen=:8080
             - -text="hello world"
+      volumes:
+        - name: logs-output
+          emptyDir: {}
